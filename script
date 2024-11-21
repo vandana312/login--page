@@ -1,0 +1,14 @@
+#!/bin/bash 
+echo " setting up web application Env "
+#update system 
+sudo apt update -y 
+#Install Utility Softwares
+sudo apt install -y zip unzip
+# Install NGINX web server
+sudo apt install -y nginx
+# clean up sample files in document root 
+sudo rm -rf /var/www/html
+#create New Document Root 
+sudo mkdir -p /var/www/html
+# deploy the login page
+sudo git clone https://github.com/vandana312/login--page.git /var/www/html
